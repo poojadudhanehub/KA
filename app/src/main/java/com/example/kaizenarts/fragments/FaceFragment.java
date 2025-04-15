@@ -99,19 +99,10 @@ public class FaceFragment extends Fragment {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://www.makeupar.com/business/showcase/earrings");
 
-        // Load the WebView URL
-        webView.loadUrl("https://www.makeupar.com/business/showcase/earrings");
-
-        // Disable scrolling
+        // Enable scrolling
         webView.setVerticalScrollBarEnabled(false);
-        webView.setHorizontalScrollBarEnabled(false);
-
-        webView.setOnTouchListener((v, event) -> {
-            if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                return true;
-            }
-            return false;
-        });
+        webView.setHorizontalScrollBarEnabled(true);
+        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
         return view;
     }

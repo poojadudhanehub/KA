@@ -77,13 +77,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu_logout) {
-            auth.signOut(); // Sign out the user
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish(); // Close MainActivity
-        } else if (id == R.id.menu_my_cart) {
+        if (id == R.id.menu_my_cart) {
             startActivity(new Intent(MainActivity.this, com.example.kaizenarts.activites.cartActivity.class));
         }
         return true;
